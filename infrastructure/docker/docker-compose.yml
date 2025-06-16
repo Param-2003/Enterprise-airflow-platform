@@ -30,8 +30,7 @@ services:
            #please change the password after the initial use for security purposes
     volumes:
       - ../../data:/opt/airflow/dags/data
-      - ../../dags/output:/opt/airflow/dags/output
-
+      
   airflow-scheduler:
     image: apache/airflow:2.8.1
     restart: always
@@ -46,8 +45,7 @@ services:
       - ../../dags:/opt/airflow/dags
       - ../../logs:/opt/airflow/logs
       - ../../plugins:/opt/airflow/plugins
-      - ../../data:/opt/airflow/dags/data
-      - ../../dags/output:/opt/airflow/dags/output
+      - ../../data:/opt/airflow/data
     command: airflow scheduler
 
   airflow-webserver:
@@ -63,8 +61,7 @@ services:
       - ../../dags:/opt/airflow/dags
       - ../../logs:/opt/airflow/logs
       - ../../plugins:/opt/airflow/plugins
-      - ../../data:/opt/airflow/dags/data
-      - ../../dags/output:/opt/airflow/dags/output
+      - ../../data:/opt/airflow/data
     ports:
       - "8080:8080"
     command: airflow webserver
