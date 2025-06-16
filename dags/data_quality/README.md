@@ -16,7 +16,7 @@ In any data pipeline, ensuring the **availability and correctness of input and o
 - Fails early with clear logs if the file is missing.
 
 **Simulation Example Log:**
-```text
+
 ✅ File found for 2025-06-16: /opt/airflow/data/input_data/2025-06-16.csv
 
 📤 2. Output File Validation (check_output_file_dag.py)
