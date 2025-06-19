@@ -1,0 +1,15 @@
+[2025-06-16T06:53:20.899+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simulate_s3_ingestion_dag.simulate_s3_ingestion scheduled__2025-06-15T00:00:00+00:00 [queued]>
+[2025-06-16T06:53:20.921+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simulate_s3_ingestion_dag.simulate_s3_ingestion scheduled__2025-06-15T00:00:00+00:00 [queued]>
+[2025-06-16T06:53:20.922+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-06-16T06:53:20.952+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): simulate_s3_ingestion> on 2025-06-15 00:00:00+00:00
+[2025-06-16T06:53:20.966+0000] {standard_task_runner.py:60} INFO - Started process 592 to run task
+[2025-06-16T06:53:20.977+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'simulate_s3_ingestion_dag', 'simulate_s3_ingestion', 'scheduled__2025-06-15T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/s3_ingestion_dag.py', '--cfg-path', '/tmp/tmp__mny__k']
+[2025-06-16T06:53:20.985+0000] {standard_task_runner.py:88} INFO - Job 18: Subtask simulate_s3_ingestion
+[2025-06-16T06:53:21.140+0000] {task_command.py:423} INFO - Running <TaskInstance: simulate_s3_ingestion_dag.simulate_s3_ingestion scheduled__2025-06-15T00:00:00+00:00 [running]> on host 7ede135554ad
+[2025-06-16T06:53:21.351+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simulate_s3_ingestion_dag' AIRFLOW_CTX_TASK_ID='simulate_s3_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2025-06-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-15T00:00:00+00:00'
+[2025-06-16T06:53:21.353+0000] {logging_mixin.py:188} INFO - 📦 Simulating S3 ingestion for data dated: 2025-06-15
+[2025-06-16T06:53:21.355+0000] {logging_mixin.py:188} INFO - ✅ Data successfully ingested into /opt/***/data/input_data/2025-06-15.csv
+[2025-06-16T06:53:21.356+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-06-16T06:53:21.378+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=simulate_s3_ingestion_dag, task_id=simulate_s3_ingestion, execution_date=20250615T000000, start_date=20250616T065320, end_date=20250616T065321
+[2025-06-16T06:53:21.435+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-16T06:53:21.487+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
